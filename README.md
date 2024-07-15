@@ -1,5 +1,5 @@
 ## DSA
-# Sortinng 
+# Sorting 
 
 # time complexity (Worst Case):
 
