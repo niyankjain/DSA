@@ -50,12 +50,15 @@ public class LL {
 	}
 
 	public void addNodeAtParticularPosition(int position, int data) {
+
+		Node node = new Node(data);
+
 		if(head == null) {
 			head = new Node(data);
 			tail = head ; 
 			size++;
 		} else {
-			node currentNode = head ;			// x0
+			Node currentNode = head ;			// x0
 			int len = 1;						// len = 1
 			while(currentNode.next != null) { 	// true, true
 				len++;							// len = 2, 3, 4
@@ -81,6 +84,7 @@ public class LL {
 	}
 
 	public void deleteFromEnd() {
+
 		if(head == null) {
 			System.out.println("Linked List is already empty");
 		}
@@ -91,7 +95,7 @@ public class LL {
 			size--;
 		}
 
-		currentNode = head ;
+		Node currentNode = head ;
 		while(currentNode.next != tail) {
 			currentNode = currentNode.next;
 		}
