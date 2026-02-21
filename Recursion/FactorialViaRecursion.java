@@ -1,16 +1,15 @@
 public class FactorialViaRecursion {
 
   public static void main(String[] args) {
-    int number = 7;
-    int fact = factorial(number, 1);
+    int number = 6;
+    int fact = factorial(number);
     System.out.println("Factorial of Number: "+number+" is: "+fact);
   }
 
-  private static int factorial(int number, int fact) {
+  private static int factorial(int number) {
     if(number == 1) {
-      return fact;
+      return 1;
     }
-    fact*=number;
-    return factorial(number-1, fact);
+    return  number * factorial(number-1);
   }
 }
