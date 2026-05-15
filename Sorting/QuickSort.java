@@ -33,16 +33,18 @@ public class QuickSort {
 			for(int index = low; index<high; index++) {
 				if(arr[index]<pivot) {
 					i++;
-					int temp = arr[index];
-					arr[index] = arr[i];
-					arr[i] = temp;
+					swap(arr, index, i);
 				}
 			}
 			i++;
-			int temp = arr[high];
-			arr[high] = arr[i];
-			arr[i] = temp;
-			return i;
+		swap(arr, high, i);
+		return i;
+	}
+
+	private static void swap(int[] arr, int index, int i) {
+		int temp = arr[index];
+		arr[index] = arr[i];
+		arr[i] = temp;
 	}
 
 }
